@@ -41,12 +41,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    display: 			block;
+    height: 			1px;
+    border: 			0;
+    border-top: 		1px solid #ccc;
+    margin: 			1em 0;
+    padding: 			0;
 }
 
 /*
@@ -57,24 +57,25 @@ hr {
 
 audio,
 canvas,
-iframe,
-svg,{
-    vertical-align: middle;
-	width:			100%;
+iframe, svg{
+    vertical-align: 	middle;
+	width:				100%;
 }
 
 
 img {
-	width:			auto;
+	width:				100%;
+	height:				100%;
+	display:			block;
 }
 /*
  * Remove default fieldset styles.
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+    border: 			0;
+    margin: 			0;
+    padding:			0;
 }
 
 /*
@@ -82,7 +83,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+    resize: 			vertical;
 }
 
 /* ==========================================================================
@@ -100,14 +101,34 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+@font-face {
+   font-family: 		'gt';
+      src: url('../fonts/GT-Walsheim-Light.woff') format('woff');           
+   font-weight: 		400;
+   font-style: 			normal;     
+}
+
+html {
+	font-family: 		'gt';
+	color: 				black;
+}
+
 body {
-	font-family:		Arial, sans-serif;
-	
+	letter-spacing:		0px;
+
 }
 
 a {
     color: 				#000;
     text-decoration: 	none;
+}
+
+h2 {
+	font-size:			27px;
+	line-height:		1.4em;
+	font-weight:		lighter;
+	margin-top:			15px;
 }
 
 ul {
@@ -116,7 +137,7 @@ ul {
     height: 			100px;
     list-style-type: 	none;
     margin: 			0;
-    padding: 			0;
+    padding: 			0px 0px 0px 25px;
     overflow: 			hidden;
 }
 
@@ -124,10 +145,12 @@ li {
 	display:			inline-block;
 	width:				10%;
 	height:				auto;
-    padding: 			1.25em;
-    font-size: 			24px;
+    padding-top: 		1.25em;
+	padding-bottom: 	1.25em;
+	padding-left: 		0em;
+	padding-right: 		1.25em;
+    font-size: 			27px;
 	font-weight:		lighter;
-    letter-spacing: 	1px;
 	color:				#000;
 }
 
@@ -140,10 +163,23 @@ nav {
 	background-color:	rgba(255,255,255,0);
 	opacity: 			0.75;
 	z-index: 			900;
+	mix-blend-mode: 	difference;
 }
 
+.sound {
+	float: 				right;
+	padding-top: 		1.85em;
+	padding-right: 		2.5vw;
+	font-size:			125%;
+}
+
+.sound a {
+ color:					black
+}
+
+
 .fullscreen-bg {
-    position: 			relative
+    position: 			absolute;
     top: 				0;
     right: 				0;
     bottom: 			0;
@@ -166,7 +202,6 @@ nav {
     z-index: 			1;
     width: 				100%;
     height: 			100vh;
-    pointer-events: 	none;
     display: 			-ms-flexbox;
     display: 			flex;
     -ms-flex-align: 	center;
@@ -174,27 +209,229 @@ nav {
     top: 				0;
     left: 				0;
     line-height: 		1em;
-    -webkit-user-select: none;
-    -moz-user-select: 	none;
-    -ms-user-select: 	none;
-    user-select:		none;
     line-height:		 1.1;
+	mix-blend-mode:		difference;
 
 }
 
-.sound {
- float: 			right;
- padding: 			20px;
- font-size:			125%;
+.fullscreen-overlay img {
+    width: 				auto;
+	height:				auto;
+    padding: 			0 1.4rem;
+    margin-left: 		5vw;
+
 }
 
-.sound a{
- color:				black
+
+#isolate{ 
+		isolation:		isolate;
 }
 
 
+.project-grid {
+	margin-top:			15vw;
+}
+
+@media screen and (max-width: 480px) {
+	.project-tile {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+	}
+}
+
+.project-tile {
+	
+}
+
+.project-raf {
+	width:				auto;
+	margin-left:		20vw;
+	margin-right:		20vw;
+}
+
+.project-tommy {
+	width:				35vw;
+	float:				right;
+	margin-left:		20vw;
+	margin-right:		0vw;
+	margin-top:			-20vw;
+	margin-bottom:		15vw;
+}
+
+.project-chanel {
+	width:				30vw;
+	float:				left;
+	margin-left:		5vw;
+	margin-right:		20vw;
+}
 
 
+.project-nike1 {
+	width:				90vw;
+	float:				none;
+	margin-left:		5vw;
+	margin-right:		5vw;
+	margin-bottom:		15vw;
+}
+
+.project-sankuanz {
+	width:				60vw;
+	float:				right;
+	margin-left:		20vw;
+	margin-right:		0vw;
+}
+
+.project-hermes {
+	width:				60vw;
+	float:				left;
+	margin-left:		0vw;
+	margin-right:		20vw;
+	margin-top:			10vw;
+}
+
+.project-hermes h2 {
+	margin-left:		40px;
+
+}
+
+.project-nike2 {
+	width:				45vw;
+	float:				right;
+	margin-left:		20vw;
+	margin-right:		8vw;
+	margin-top:			10vw;
+	margin-bottom:		0vw;
+}
+
+.project-repossi{
+	width:				25vw;
+	clear:				both;
+	float:				left;
+	margin-left:		10vw;
+	margin-right:		0vw;
+	margin-top:			-10vw;
+	margin-bottom:		0vw;
+}
+
+.project-51sprints {
+	width:				30vw;
+	clear:				both;
+	float:				right;
+	margin-left:		0vw;
+	margin-right:		15vw;
+	margin-top:			-10vw;
+	margin-bottom:		0vw;
+}
+
+.project-51sprints video {
+	width:				100%;
+}
+
+.project-iris {
+	width:				40vw;
+	float:				left;
+	margin-left:		0vw;
+	margin-right:		20vw;
+	margin-top:			0vw;
+}
+
+.project-iris h2 {
+	margin-left:		40px;
+
+}
+
+.project-iris video {
+	width:				100%;
+}
+
+.project-klm {
+	width:				70vw;
+	clear:				both;
+	float:				right;
+	margin-left:		20vw;
+	margin-right:		0vw;
+	margin-top:			5vw;
+	margin-bottom:		15vw;
+}
+
+.project h2 {
+	
+}	
+	
+.project img {
+		
+}
+.description {
+	max-width:			42em;
+	margin:				0 auto;
+	margin-bottom:		15vw;
+
+}
+
+.description p {
+	float:				none;
+	font-size:			36px;
+	line-height:		46px;
+	letter-spacing:		0px;
+}
+
+.description a {
+	text-decoration:	underline;
+}
+
+iframe {
+	width:				563px;
+	height:				393px;
+    border-width: 		0px;
+    border-style: 		inset;
+    border-color: 		initial;
+    border-image: 		initial;
+}
+
+
+footer {
+	width:				100%;
+	height:				auto;
+	clear:				both;
+	margin-bottom:		50px;
+	
+}
+
+footer a {
+	border-bottom:		1px solid #000;
+	padding-bottom:		2px;
+	
+}
+
+footer ul {
+	display:			inline-block;
+	list-style: 		none;
+	clear:				both;
+	padding:			0 0 50px 40px;
+	
+}
+
+footer li {
+	width:				auto;
+	display:			block;
+	font-size:			17px;
+	clear:				both;
+	padding:			0;
+}
+
+.footer-1 {
+	float:				left;
+	width:				15vw;
+	height:				auto;
+	
+}
+
+.footer-2 {
+	float:				left;
+	width:				15vw;	
+	height:				auto;
+}
 
 
 
@@ -222,7 +459,7 @@ nav {
 
 .visuallyhidden {
     border: 0;
-    clip: rauto;
+    clip: auto;
     clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
