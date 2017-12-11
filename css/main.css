@@ -11,9 +11,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    color: 				#222;
+    font-size: 			1em;
+    line-height: 		1.4;
 }
 
 /*
@@ -27,13 +27,13 @@ html {
  */
 
 .selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background: 		#b3d4fc;
+    text-shadow: 		none;
 }
 
 .selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background: 		#b3d4fc;
+    text-shadow: 		none;
 }
 
 /*
@@ -91,10 +91,10 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+    margin: 			0.2em 0;
+    background: 		#ccc;
+    color: 				#000;
+    padding: 			0.2em 0;
 }
 
 /* ==========================================================================
@@ -104,7 +104,7 @@ textarea {
 
 @font-face {
    font-family: 		'gt';
-      src: url('../fonts/GT-Walsheim-Light.woff') format('woff');           
+   src: url('../fonts/GT-Walsheim-Light.woff') format('woff');           
    font-weight: 		400;
    font-style: 			normal;     
 }
@@ -147,11 +147,19 @@ li {
 	height:				auto;
     padding-top: 		1.25em;
 	padding-bottom: 	1.25em;
-	padding-left: 		0em;
+	padding-left: 		1em;
 	padding-right: 		1.25em;
     font-size: 			27px;
 	font-weight:		lighter;
 	color:				#000;
+}
+
+@media screen and (max-width: 750px) {
+	li {
+    font-size:			18px;
+    margin-left: 		0 !important;
+    margin-top: 		0 !important;
+	}
 }
 
 nav {
@@ -176,6 +184,14 @@ nav {
 .sound a {
  color:					black
 }
+
+@media screen and (max-width: 750px) {
+	.sound{
+	padding-top:		1em;
+	font-size:			100%;
+	}
+}
+
 
 
 .fullscreen-bg {
@@ -222,9 +238,14 @@ nav {
 
 }
 
+@media screen and (max-width: 750px) {
+	.fullscreen-overlay img{
+    width:				50vw;
+	}
+}
 
 #isolate{ 
-		isolation:		isolate;
+	isolation:			isolate;
 }
 
 
@@ -232,22 +253,38 @@ nav {
 	margin-top:			15vw;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
 	.project-tile {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
+    width: 				100% !important;
+    margin-left: 		0 !important;
+    margin-top: 		0 !important;
+	margin-bottom:		7vh;
 	}
 }
 
-.project-tile {
-	
+@media screen and (max-width: 750px) {
+	.project-tile h2 {
+    font-size: 			18px;
+	margin-left:		6vw;
+	}
 }
 
 .project-raf {
 	width:				auto;
 	margin-left:		20vw;
 	margin-right:		20vw;
+	margin-bottom:		10vw;
+}
+
+.project-chanel {
+	width:				35vw;
+	float:				left;
+	margin-left:		8vw;
+	margin-right:		20vw;
+}
+
+.project-chanel video {
+	width:				100%;
 }
 
 .project-tommy {
@@ -258,14 +295,6 @@ nav {
 	margin-top:			-20vw;
 	margin-bottom:		15vw;
 }
-
-.project-chanel {
-	width:				30vw;
-	float:				left;
-	margin-left:		5vw;
-	margin-right:		20vw;
-}
-
 
 .project-nike1 {
 	width:				90vw;
@@ -301,7 +330,12 @@ nav {
 	margin-left:		20vw;
 	margin-right:		8vw;
 	margin-top:			10vw;
-	margin-bottom:		0vw;
+}
+
+@media screen and (max-width: 750px) {
+	.project-nike2 {
+	margin-right:		0vw;
+	}
 }
 
 .project-repossi{
@@ -311,17 +345,14 @@ nav {
 	margin-left:		10vw;
 	margin-right:		0vw;
 	margin-top:			-10vw;
-	margin-bottom:		0vw;
 }
 
 .project-51sprints {
 	width:				30vw;
 	clear:				both;
 	float:				right;
-	margin-left:		0vw;
 	margin-right:		15vw;
 	margin-top:			-10vw;
-	margin-bottom:		0vw;
 }
 
 .project-51sprints video {
@@ -337,8 +368,7 @@ nav {
 }
 
 .project-iris h2 {
-	margin-left:		40px;
-
+	margin-left:		40px
 }
 
 .project-iris video {
@@ -355,13 +385,6 @@ nav {
 	margin-bottom:		15vw;
 }
 
-.project h2 {
-	
-}	
-	
-.project img {
-		
-}
 .description {
 	max-width:			42em;
 	margin:				0 auto;
@@ -378,6 +401,14 @@ nav {
 
 .description a {
 	text-decoration:	underline;
+}
+
+@media screen and (max-width: 750px) {
+	.description p {
+    font-size: 			23px;
+	line-height:		28px;
+	margin:				15vh 2vh;
+	}
 }
 
 iframe {
@@ -404,6 +435,7 @@ footer a {
 	
 }
 
+
 footer ul {
 	display:			inline-block;
 	list-style: 		none;
@@ -411,6 +443,7 @@ footer ul {
 	padding:			0 0 50px 40px;
 	
 }
+
 
 footer li {
 	width:				auto;
@@ -420,17 +453,41 @@ footer li {
 	padding:			0;
 }
 
+@media screen and (max-width: 750px) {
+	footer {
+    margin-left:		6vw;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	footer ul {
+    padding: 			0;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	footer li {
+    font-size: 			14px;
+	}
+}
+
 .footer-1 {
 	float:				left;
-	width:				15vw;
+	width:				20vw;
 	height:				auto;
 	
 }
 
 .footer-2 {
 	float:				left;
-	width:				15vw;	
+	width:				20vw;	
 	height:				auto;
+}
+
+@media screen and (max-width: 750px) {
+	.footer-1, .footer-2{
+    width:				50%;
+	}
 }
 
 
@@ -445,7 +502,7 @@ footer li {
  */
 
 .hidden {
-    display: none !important;
+    display:			 none !important;
 }
 
 /*
